@@ -8,7 +8,7 @@ Following these guidelines helps to communicate that you respect the time of the
 
 ## Using the issue tracker
 
-The [issue tracker](https://github.com/faeldon/philippines-psgc-shapefiles/issues) is
+The [issue tracker](https://github.com/altcoder/philippines-psgc-shapefiles/issues) is
 the preferred channel for [bug reports](#bugs), [features requests](#features)
 and [submitting pull requests](#pull-requests).
 
@@ -22,7 +22,7 @@ Guidelines for bug reports:
 
 1. **Use the GitHub issue search** &mdash; check if the issue has already been reported.
 
-2. **Check if the issue has been fixed** &mdash; try to reproduce it using the latest `master` or development branch in the repository.
+2. **Check if the issue has been fixed** &mdash; try to reproduce it using the latest `main` or development branch in the repository.
 
 3. **Isolate the problem** &mdash; ideally create a [reduced test case](https://css-tricks.com/reduced-test-cases/) and a live example.
 
@@ -69,9 +69,9 @@ project's developers might not want to merge into the project.
 Please adhere to the coding conventions used throughout a project (indentation,
 accurate comments, etc.) and any other requirements (such as test coverage).
 
-Since the `master` branch is what people actually use in production, we have a
+Since the `main` branch is what people actually use in production, we have a
 `dev` branch that unstable changes get merged into first. Only when we
-consider that stable we merge it into the `master` branch and release the
+consider that stable we merge it into the `main` branch and release the
 changes for real.
 
 Adhering to the following process is the best way to get your work
@@ -85,17 +85,17 @@ included in the project:
    # Navigate to the newly cloned directory
    cd philippines-psgc-shapefiles
    # Assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/faeldon/philippines-psgc-shapefiles.git
+   git remote add upstream https://github.com/altcoder/philippines-psgc-shapefiles.git
    ```
 
 2. If you cloned a while ago, get the latest changes from upstream:
 
    ```bash
-   git checkout dev
-   git pull upstream dev
+   git checkout main
+   git pull upstream main
    ```
 
-3. Create a new topic branch (off the `dev` branch) to contain your feature, change, or fix:
+3. Create a new topic branch (off the `main` branch) to contain your feature, change, or fix:
 
    ```bash
    git checkout -b <topic-branch-name>
@@ -119,4 +119,4 @@ included in the project:
     with a clear title and description.
 
 **IMPORTANT**: By submitting a patch, you agree to allow the project
-owners to license your work under the terms of the [MIT License](https://github.com/faeldon/philippines-psgc-shapefiles/blob/master/LICENSE.md).
+owners to license your work under the terms of the [MIT License](https://github.com/altcoder/philippines-psgc-shapefiles/blob/main/LICENSE.md).

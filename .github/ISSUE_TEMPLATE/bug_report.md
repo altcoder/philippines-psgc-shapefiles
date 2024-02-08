@@ -3,7 +3,7 @@ name: Bug report
 about: Create a report to help us improve
 ---
 
-Before opening a new issue, please take a moment to review our [**community guidelines**](https://github.com/faeldon/philippines-psgc-shapefiles/blob/master/.github/CONTRIBUTING.md) to make the contribution process easy and effective for everyone involved.
+Before opening a new issue, please take a moment to review our [**community guidelines**](https://github.com/altcoder/philippines-psgc-shapefiles/blob/main/.github/CONTRIBUTING.md) to make the contribution process easy and effective for everyone involved.
 
 ## Description
 A clear and concise description of what the bug is.
@@ -21,5 +21,6 @@ If applicable, add screenshots to help explain your problem.
 
 ## Versions
 
+- Python:
 - Node/NPM:
 - Browser:
