@@ -6,20 +6,40 @@ This repository contains Philippine Standard Geographic Code (PSGC) vector maps 
 public data and updated with changes published by the Philippine Statistics Authority (PSA). The dataset is updated to reflect all [PSGC Summary of Changes](https://psa.gov.ph/classification/psgc).
 
 
-You can download the following administrative level shapefiles updated as of [31 December 2023](https://psa.gov.ph/system/files/scd/PSGC-4Q-2023-National-and-Provincial-Summary.xlsx).
+#### 📣 *This repository uses [`git-lfs`](https://git-lfs.com/) to store the shapefiles. Clone this project to download the files.*
+```bash
+$ git clone https://github.com/altcoder/philippines-psgc-shapefiles.git
+Cloning into 'philippines-psgc-shapefiles'...
+remote: Enumerating objects: 240, done.
+remote: Counting objects: 100% (238/238), done.
+remote: Compressing objects: 100% (168/168), done.
+remote: Total 240 (delta 65), reused 225 (delta 60), pack-reused 2
+Receiving objects: 100% (240/240), 9.46 MiB | 7.55 MiB/s, done.
+Resolving deltas: 100% (65/65), done.
+Filtering content: 100% (26/26), 3.34 GiB | 35.87 MiB/s, done.
+
+$ cd philippines-psgc-shapefiles && ls dist
+PH_Adm1_Regions.csv        PH_Adm2_ProvDists.csv      PH_Adm3_MuniCities.csv     PH_Adm4_BgySubMuns.csv
+PH_Adm1_Regions.shp.zip    PH_Adm2_ProvDists.shp.zip  PH_Adm3_MuniCities.shp.zip PH_Adm4_BgySubMuns.shp.zip
+```
+
+
+The administrative level shapefiles updated as of [31 December 2023](https://psa.gov.ph/system/files/scd/PSGC-4Q-2023-National-and-Provincial-Summary.xlsx).
+
 
 | WGS84 ESRI Shapefile | Description |
 | --- | --- |
 | **[PH_Adm1_Regions.shp.zip](dist/PH_Adm1_Regions.shp.zip)** | Level 1: Regions |
-| **[PH_Adm2_ProvDists.shp.zip.zip](dist/PH_Adm2_ProvDists.shp.zip)** | Level 2: Provinces and Districts |
-| **[PH_Adm3_MuniCities.shp.zip.zip](dist/PH_Adm3_MuniCities.shp.zip)** | Level 3: Municipalities and Cities |
-| **[PH_Adm4_BgySubMuns.shp.zip.zip](dist/PH_Adm4_BgySubMuns.shp.zip)** | Level 4: Barangays and Sub-Municipalities |
+| **[PH_Adm2_ProvDists.shp.zip](dist/PH_Adm2_ProvDists.shp.zip)** | Level 2: Provinces and Districts |
+| **[PH_Adm3_MuniCities.shp.zip](dist/PH_Adm3_MuniCities.shp.zip)** | Level 3: Municipalities and Cities |
+| **[PH_Adm4_BgySubMuns.shp.zip](dist/PH_Adm4_BgySubMuns.shp.zip)** | Level 4: Barangays and Sub-Municipalities |
 
 ## Changelogs
 
-**Status Definition**
-❌ *"Pending"* - Changes haven't been applied in the dataset.
-✅ *"Updated"/"No Change"* - The PSGC changes in the reported period have been applied in the dataset.
+List of changes that were reflected on the datasets.
+- ❌ *"Pending"* - Changes haven't been applied in the dataset.
+- ✅ *"Updated"/"No Change"* - The PSGC changes in the reported period have been applied in the dataset.
+
 
 | PSGC Updates      | Date | Status |
 | :---------------- | :------ | ----: |
