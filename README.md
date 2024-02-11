@@ -10,24 +10,24 @@ changes in the [PSGC Summary of Changes](https://psa.gov.ph/classification/psgc)
 
 You can download the following administrative level shapefiles updated for Jan 2023
 
-**[Country.zip](datasets/SHAPEFILES/2023/Country.zip)**  
-**[Regions.zip](datasets/SHAPEFILES/2023/Regions.zip)**  
-**[Provinces.zip](datasets/SHAPEFILES/2023/Provinces.zip)**   
-**[Municities.zip](datasets/SHAPEFILES/2023/Municities.zip)**  
-**[Barangays.zip](datasets/SHAPEFILES/2023/Barangays.zip)**  
+**[Country.zip](datasets/SHAPEFILES/2023/Country.zip)**
+**[Regions.zip](datasets/SHAPEFILES/2023/Regions.zip)**
+**[Provinces.zip](datasets/SHAPEFILES/2023/Provinces.zip)**
+**[Municities.zip](datasets/SHAPEFILES/2023/Municities.zip)**
+**[Barangays.zip](datasets/SHAPEFILES/2023/Barangays.zip)**
 
 ## Changelogs
 
-**Status Definition**  
-❌ *"Pending"* - Changes haven't been applied in the dataset.  
-✅ *"Updated"/"No Change"* - The PSGC changes in the reported period have been applied in the dataset.  
+**Status Definition**
+❌ *"Pending"* - Changes haven't been applied in the dataset.
+✅ *"Updated"/"No Change"* - The PSGC changes in the reported period have been applied in the dataset.
 
 | PSGC Updates      | Date | Status |
 | :---------------- | :------ | ----: |
 | [No Change in the Fourth Quarter 2023 PSGC](https://psa.gov.ph/classification/psgc/node/1684061953) | January 23, 2024 | ✅ (NC) |
-| [Third Quarter 2023 PSGC Updates: Conversion to a New City, Merging of 44 Barangays, Renaming of Five Barangays, Transferring of 10 Barangays, and Correction of the Names of 12 Barangays](https://psa.gov.ph/classification/psgc/node/1684061390) | October 24, 2023 | ❌ |
-| [Second Quarter 2023 PSGC Updates: Correction of the Names of One Municipality and 35 Barangays](https://psa.gov.ph/classification/psgc/node/1684060569) | August 15, 2023 | ❌ |
-| [First Quarter 2023 PSGC Updates: Six New Barangays and Correction of the Names of One Municipality and Four Barangays](https://psa.gov.ph/classification/psgc/node/176698) | April 18, 2023 | ❌ |
+| [Third Quarter 2023 PSGC Updates: Conversion to a New City, Merging of 44 Barangays, Renaming of Five Barangays, Transferring of 10 Barangays, and Correction of the Names of 12 Barangays](https://psa.gov.ph/classification/psgc/node/1684061390) | October 24, 2023 | ✅ |
+| [Second Quarter 2023 PSGC Updates: Correction of the Names of One Municipality and 35 Barangays](https://psa.gov.ph/classification/psgc/node/1684060569) | August 15, 2023 | ✅ |
+| [First Quarter 2023 PSGC Updates: Six New Barangays and Correction of the Names of One Municipality and Four Barangays](https://psa.gov.ph/classification/psgc/node/176698) | April 18, 2023 | ✅ |
 | [Fourth Quarter 2022 PSGC Updates: Conversion to a New City, Merging of 28 Barangays, Renaming of a Barangay, and Correction of the Names of 19 Barangays](https://psa.gov.ph/classification/psgc/node/168704) | January 25, 2023 | ✅ |
 | [Third Quarter 2022 PSGC Updates: Division of the Province of Maguindanao, Conversion of One (1) Municipality into New City, Creation of One (1) Barangay, and Correction of the Names of 44 Barangays](https://psa.gov.ph/classification/psgc/node/168321) | November 8, 2022 | ✅  |
 | [First Quarter 2022 PSGC Updates: Correction of the Names of Five Barangays](https://psa.gov.ph/classification/psgc/node/167762) | April 29, 2022 | ✅ |
@@ -72,7 +72,7 @@ The 2015 Level 4 shapefiles came from [this Github Repo](https://github.com/just
 The 2011 Level 0 to 4 shapefiles came from [GADM Website Data](https://gadm.org)
 
 Please refer to the [PSGC Summary of Changes](https://psa.gov.ph/classification/psgc)
-to take into account potential issues that may arise when using these maps together with your datasets. 
+to take into account potential issues that may arise when using these maps together with your datasets.
 
 ## Contributing
 
@@ -80,7 +80,3 @@ Contributions are always welcome, no matter how large or small. Before contribut
 please read the [code of conduct](./.github/CODE_OF_CONDUCT.md).
 
 Appreciate if someone can source a  more updated version of the maps based on the latest PSGC changes.
-
-
-
-
