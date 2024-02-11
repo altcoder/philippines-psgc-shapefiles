@@ -3,18 +3,17 @@
 Philippine PSGC administrative boundaries shapefiles.
 
 This repository contains Philippine Standard Geographic Code (PSGC) vector maps (shapefiles) sourced from
-public datasets available online and updated based from changes published by the Philippine Statistics Authority (PSA).
+public data and updated with changes published by the Philippine Statistics Authority (PSA). The dataset is updated to reflect all [PSGC Summary of Changes](https://psa.gov.ph/classification/psgc).
 
-[QGIS](https://qgis.org) was used to update the maps to reflect the most recent
-changes in the [PSGC Summary of Changes](https://psa.gov.ph/classification/psgc).
 
-You can download the following administrative level shapefiles updated for Jan 2023
+You can download the following administrative level shapefiles updated as of [31 December 2023](https://psa.gov.ph/system/files/scd/PSGC-4Q-2023-National-and-Provincial-Summary.xlsx).
 
-**[Country.zip](datasets/SHAPEFILES/2023/Country.zip)**
-**[Regions.zip](datasets/SHAPEFILES/2023/Regions.zip)**
-**[Provinces.zip](datasets/SHAPEFILES/2023/Provinces.zip)**
-**[Municities.zip](datasets/SHAPEFILES/2023/Municities.zip)**
-**[Barangays.zip](datasets/SHAPEFILES/2023/Barangays.zip)**
+| WGS84 ESRI Shapefile | Description |
+| --- | --- |
+| **[PH_Adm1_Regions.shp.zip](dist/PH_Adm1_Regions.shp.zip)** | Level 1: Regions |
+| **[PH_Adm2_ProvDists.shp.zip.zip](dist/PH_Adm2_ProvDists.shp.zip)** | Level 2: Provinces and Districts |
+| **[PH_Adm3_MuniCities.shp.zip.zip](dist/PH_Adm3_MuniCities.shp.zip)** | Level 3: Municipalities and Cities |
+| **[PH_Adm4_BgySubMuns.shp.zip.zip](dist/PH_Adm4_BgySubMuns.shp.zip)** | Level 4: Barangays and Sub-Municipalities |
 
 ## Changelogs
 
@@ -56,11 +55,19 @@ You can download the following administrative level shapefiles updated for Jan 2
 | [No Philippine Standard Geographic Code (PSGC) Updates for the First Quarter of 2016](https://psa.gov.ph/classification/psgc/node/55142) | April 14, 2016 | ✅ (NC) |
 | [Seven New Barangays Established In the 3rd Quarter of 2015](https://psa.gov.ph/classification/psgc/node/51291) |   October 28, 2015   | ✅ |
 
+## Conventions
+
+PSGC PSA's new 10-digit coding structure and stored as numeric format.
+
+![PSGC](docs/psgc.pngimage.png)
+
+For convenience, parent PSGC codes are also stored in the datasets. This can be useful when joining across administrative levels.
+
 ## Source Files
 
-Maps are using the WGS 1984, Lat/Long projection.
+Maps are using EPSG:32651, Lat/Long projection.
 
-The 2023 Level 0 to 4 shapefiles came from [OCHA Services Website](https://data.humdata.org/dataset/cod-ab-phl).
+The 2023 Level 0 to 4 raw shapefiles came from [OCHA Services Website](https://data.humdata.org/dataset/cod-ab-phl). This dataset was cleaned up and matched with the most recent PSGC codes and location names. The shapefile was also updated to reflect merging of locations.
 
 ### Old Sources
 If you are using an older version of this project (2019) the source data for that uses:
@@ -79,4 +86,4 @@ to take into account potential issues that may arise when using these maps toget
 Contributions are always welcome, no matter how large or small. Before contributing,
 please read the [code of conduct](./.github/CODE_OF_CONDUCT.md).
 
-Appreciate if someone can source a  more updated version of the maps based on the latest PSGC changes.
+Kindly report data errors by filing issues.

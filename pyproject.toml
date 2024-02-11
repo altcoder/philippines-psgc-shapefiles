@@ -277,4 +277,5 @@ deprecated-modules = "optparse,tkinter.tix"
 overgeneral-exceptions = ["BaseException", "Exception"]
 
 [tool.codespell]
-skip = '*.csv'
+skip = '*.csv,*.shp.xml,*.cpg,*.prj'
+ignore-words-list = "bulit"
