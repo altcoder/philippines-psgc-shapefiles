@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import re
 
+import numpy as np
 import geopandas as gpd
 import pandas as pd
 
@@ -112,12 +113,12 @@ def add_geometry_measures(gdf, epsg_code=None):
         gdf = gdf.to_crs(epsg=epsg_code)
 
     # Calculate perimeter and area in CRS units
-    gdf["len_crs"] = gdf.geometry.length
-    gdf["area_crs"] = gdf.geometry.area
+    gdf["len_crs"] = gdf.geometry.length.fillna(0).astype(int)
+    gdf["area_crs"] = gdf.geometry.area.fillna(0).astype(int)
 
     # Assuming the CRS units are meters, convert to kilometers and square kilometers
     # Adjust the conversion if the CRS units are different
-    gdf["len_km"] = gdf["len_crs"] / 1000
-    gdf["area_km2"] = gdf["area_crs"] / 1e6
+    gdf["len_km"] = gdf["len_crs"] // 1000
+    gdf["area_km2"] = gdf["area_crs"] // 1e6
 
     return gdf

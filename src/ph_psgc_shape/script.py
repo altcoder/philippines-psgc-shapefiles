@@ -903,11 +903,11 @@ def process_psgc_2023_4q(file_path, sheet_name):
     adm4_w32_df = adm4_w3_df.merge(adm2_df, on="adm2_pcode", how="left")
     # print(adm4_w32_df.sort_values(by="name").head())
 
-    process_psgc_2023_4q_country(df)
+    # process_psgc_2023_4q_country(df)
     # process_psgc_2023_4q_region(df)
     # process_psgc_2023_4q_provdists(df)
     # process_psgc_2023_4q_municities(df)
-    # process_psgc_2023_4q_bgysubmuns(adm4_w32_df)
+    process_psgc_2023_4q_bgysubmuns(adm4_w32_df)
 
 
 def main():
