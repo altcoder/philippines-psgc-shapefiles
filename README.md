@@ -59,7 +59,7 @@ You can download the following administrative level shapefiles updated as of [31
 
 PSGC PSA's new 10-digit coding structure and stored as numeric format.
 
-![PSGC](docs/psgc.pngimage.png)
+![PSGC](docs/psgc.png)
 
 For convenience, parent PSGC codes are also stored in the datasets. This can be useful when joining across administrative levels.
 
