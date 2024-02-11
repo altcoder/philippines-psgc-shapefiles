@@ -29,6 +29,7 @@ The administrative level shapefiles updated as of [31 December 2023](https://psa
 
 | WGS84 ESRI Shapefile | Description |
 | --- | --- |
+| **[PH_Adm0_Country.shp.zip](dist/PH_Adm0_Country.shp.zip)** | Level 0: Country |
 | **[PH_Adm1_Regions.shp.zip](dist/PH_Adm1_Regions.shp.zip)** | Level 1: Regions |
 | **[PH_Adm2_ProvDists.shp.zip](dist/PH_Adm2_ProvDists.shp.zip)** | Level 2: Provinces and Districts |
 | **[PH_Adm3_MuniCities.shp.zip](dist/PH_Adm3_MuniCities.shp.zip)** | Level 3: Municipalities and Cities |

@@ -8,12 +8,53 @@ import sys
 
 import numpy as np
 from debug import debug_bgy_log, report_nulls
-from geo_utils import (add_geometry_measures, convert_adm_pcode,
-                       read_excel_file, read_shapefile)
+from geo_utils import add_geometry_measures, convert_adm_pcode, read_excel_file, read_shapefile
 
 
 def hello():
     print("Hello from process_psgc_2023_4q_region")
+
+
+def process_psgc_2023_4q_country(psgc_df):
+    country_gdf = read_shapefile("data/2023/Country/phl_admbnda_adm0_singlepart_psa_namria_20231106.shp")
+    country_gdf.columns = [
+        "shape_len",
+        "shape_area",
+        "adm0_en",
+        "adm0_pcode",
+        "date",
+        "valid_on",
+        "valid_to",
+        "geometry",
+    ]
+    print(country_gdf.head())
+    print(country_gdf.columns)
+    print(country_gdf.shape)
+
+    country_gdf = add_geometry_measures(country_gdf, epsg_code=32651)
+    country_gdf = country_gdf[
+        [
+            "adm0_en",
+            "len_crs",
+            "area_crs",
+            "len_km",
+            "area_km2",
+            "geometry",
+        ]
+    ]
+    country_gdf.columns = [
+        "adm0_en",
+        "len_crs",
+        "area_crs",
+        "len_km",
+        "area_km2",
+        "geometry",
+    ]
+
+    print(country_gdf.head())
+    country_gdf.to_file("dist/PH_Adm0_Country.shp.zip", driver="ESRI Shapefile")
+    gdf_without_geometry = country_gdf.drop(columns=["geometry"])
+    gdf_without_geometry.to_csv("dist/PH_Adm0_Country.csv", index=False)
 
 
 def process_psgc_2023_4q_region(psgc_df):
@@ -862,10 +903,11 @@ def process_psgc_2023_4q(file_path, sheet_name):
     adm4_w32_df = adm4_w3_df.merge(adm2_df, on="adm2_pcode", how="left")
     # print(adm4_w32_df.sort_values(by="name").head())
 
-    process_psgc_2023_4q_region(df)
-    process_psgc_2023_4q_provdists(df)
-    process_psgc_2023_4q_municities(df)
-    process_psgc_2023_4q_bgysubmuns(adm4_w32_df)
+    process_psgc_2023_4q_country(df)
+    # process_psgc_2023_4q_region(df)
+    # process_psgc_2023_4q_provdists(df)
+    # process_psgc_2023_4q_municities(df)
+    # process_psgc_2023_4q_bgysubmuns(adm4_w32_df)
 
 
 def main():

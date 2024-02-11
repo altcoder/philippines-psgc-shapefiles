@@ -2,6 +2,7 @@
 .DS_Store
 
 # Local workspace
+.vscode/
 workspace/
 data/psgc/\~\$*.xlsx
 
