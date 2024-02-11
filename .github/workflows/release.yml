@@ -1,0 +1,14 @@
+name: release
+on:
+  workflow_call:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*.*.*'
+  pull_request:
+    types:
+      - labeled
+jobs:
+  release:
+    uses: altcoder/action-python/.github/workflows/release.yml@v0.1
