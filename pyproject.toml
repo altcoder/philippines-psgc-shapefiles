@@ -25,7 +25,7 @@ dynamic = ["version"]
 dependencies = [
     "numpy==1.26.4",
     "pandas==2.2.0",
-    "pyarrow==15.0.0",
+    "pyarrow==15.0.2",
     "openpyxl==3.1.2",
     "geopandas==0.14.3",
 ]
