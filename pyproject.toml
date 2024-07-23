@@ -41,7 +41,7 @@ test = [
     "flake8",
     "flake8-pyproject",
     "pre-commit==3.6.0",
-    "pylint==3.0.3",
+    "pylint==3.2.6",
     "pylint_junit",
     "pytest-cov==4.1.0",
     "pytest-mock<3.12.1",
