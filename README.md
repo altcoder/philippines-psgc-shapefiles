@@ -1,8 +1,9 @@
 # Philippines PSGC Administrative Boundaries Shapefiles
 
-Philippine PSGC administrative boundaries shapefiles.
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/faeldon/philippines-json-maps/master/LICENSE)
 
-This repository contains Philippine Standard Geographic Code (PSGC) vector maps (shapefiles) sourced from
+
+This project contains Philippine Standard Geographic Code (PSGC) vector maps (shapefiles) sourced from
 public data and updated with changes published by the Philippine Statistics Authority (PSA). The dataset is updated to reflect all [PSGC Summary of Changes](https://psa.gov.ph/classification/psgc).
 
 
