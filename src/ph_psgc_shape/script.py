@@ -233,13 +233,17 @@ def process_psgc_2023_4q_provdists(psgc_df):
     gdf_without_geometry.to_csv("dist/PH_Adm2_ProvDists.csv", index=False)
 
 
-def update_municities_psgc_code(municities_gdf, old_psgc_code, new_psgc_code):
-    municities_gdf.loc[
-        municities_gdf["psgc_code"] == old_psgc_code, "adm3_pcode"
-    ] = f"P{str(new_psgc_code).zfill(10)[:7]}"
-    municities_gdf.loc[
-        municities_gdf["psgc_code"] == old_psgc_code, "adm2_pcode"
-    ] = f"P{str(new_psgc_code).zfill(10)[:5]}"
+def update_municities_psgc_code(municities_gdf, old_psgc_code, new_psgc_code, adm3_pcode=None, adm2_pcode=None):
+    if adm3_pcode is None:
+        new_adm3_pcode = f"P{str(new_psgc_code).zfill(10)[:7]}"
+    else:
+        new_adm3_pcode = f"P{str(adm3_pcode).zfill(10)[:7]}"
+    municities_gdf.loc[municities_gdf["psgc_code"] == old_psgc_code, "adm3_pcode"] = new_adm3_pcode
+    if adm2_pcode is None:
+        new_adm2_pcode = f"P{str(new_psgc_code).zfill(10)[:5]}"
+    else:
+        new_adm2_pcode = f"P{str(adm2_pcode).zfill(10)[:5]}"
+    municities_gdf.loc[municities_gdf["psgc_code"] == old_psgc_code, "adm2_pcode"] = new_adm2_pcode
     municities_gdf.loc[municities_gdf["psgc_code"] == old_psgc_code, "psgc_code"] = new_psgc_code
 
 
@@ -379,6 +383,30 @@ def process_psgc_2023_4q_municities(psgc_df):
     update_municities_psgc_code(municities_gdf, 1909906000, 1999906000)  # Pikit Cluster I
     update_municities_psgc_code(municities_gdf, 1909907000, 1999907000)  # Pikit Cluster II
     update_municities_psgc_code(municities_gdf, 1909908000, 1999908000)  # Pikit Cluster III
+
+    # NCR Cities and Municipalities to Districts
+    # https://github.com/faeldon/philippines-json-maps/issues/3
+    update_municities_psgc_code(municities_gdf, 1380100000, 1380100000, adm2_pcode=1307500000)  # City of Caloocan
+    update_municities_psgc_code(municities_gdf, 1380200000, 1380200000, adm2_pcode=1307600000)  # City of Las Piñas
+    update_municities_psgc_code(municities_gdf, 1380300000, 1380300000, adm2_pcode=1307600000)  # City of Makati
+    update_municities_psgc_code(municities_gdf, 1380400000, 1380400000, adm2_pcode=1307500000)  # City of Malabon
+    update_municities_psgc_code(municities_gdf, 1380500000, 1380500000, adm2_pcode=1307400000)  # City of Mandaluyon
+    update_municities_psgc_code(municities_gdf, 1380600000, 1380600000, adm2_pcode=1303900000)  # City of Manila
+    update_municities_psgc_code(municities_gdf, 1380700000, 1380700000, adm2_pcode=1307400000)  # City of Marikina
+    update_municities_psgc_code(municities_gdf, 1380800000, 1380800000, adm2_pcode=1307600000)  # City of Muntinlupa
+    update_municities_psgc_code(municities_gdf, 1380900000, 1380900000, adm2_pcode=1307500000)  # City of Navotas
+    update_municities_psgc_code(municities_gdf, 1381000000, 1381000000, adm2_pcode=1307600000)  # City of Parañaque
+    update_municities_psgc_code(municities_gdf, 1381100000, 1381100000, adm2_pcode=1307600000)  # Pasay City
+    update_municities_psgc_code(municities_gdf, 1381200000, 1381200000, adm2_pcode=1307400000)  # City of Pasig
+    update_municities_psgc_code(municities_gdf, 1381300000, 1381300000, adm2_pcode=1307400000)  # Quezon City
+    update_municities_psgc_code(municities_gdf, 1381400000, 1381400000, adm2_pcode=1307400000)  # City of San Juan
+    update_municities_psgc_code(municities_gdf, 1381500000, 1381500000, adm2_pcode=1307600000)  # City of Taguig
+    update_municities_psgc_code(municities_gdf, 1381600000, 1381600000, adm2_pcode=1307500000)  # City of Valenzuela
+    update_municities_psgc_code(municities_gdf, 1381701000, 1381701000, adm2_pcode=1307600000)  # Pateros
+
+    # Davao City to Davao Del Sur
+    # https://github.com/faeldon/philippines-json-maps/issues/4
+    update_municities_psgc_code(municities_gdf, 1130700000, 1130700000, adm2_pcode=1102400000)  # Davao City
 
     print(municities_gdf.head())
     print(municities_gdf.columns)
@@ -906,8 +934,8 @@ def process_psgc_2023_4q(file_path, sheet_name):
     # process_psgc_2023_4q_country(df)
     # process_psgc_2023_4q_region(df)
     # process_psgc_2023_4q_provdists(df)
-    # process_psgc_2023_4q_municities(df)
-    process_psgc_2023_4q_bgysubmuns(adm4_w32_df)
+    process_psgc_2023_4q_municities(df)
+    # process_psgc_2023_4q_bgysubmuns(adm4_w32_df)
 
 
 def main():
