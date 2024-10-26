@@ -44,7 +44,7 @@ test = [
     "pylint==3.0.3",
     "pylint_junit",
     "pytest-cov==4.1.0",
-    "pytest-mock<3.12.1",
+    "pytest-mock<3.14.1",
     "pytest-runner",
     "pytest==8.0.0",
     "pytest-github-actions-annotate-failures",
