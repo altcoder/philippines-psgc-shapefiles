@@ -1,3 +1,18 @@
+# This repository has moved
+
+> [!IMPORTANT]
+> **This repository is no longer maintained.** It has moved to
+> **[faeldon/philippines-psgc-shapefiles](https://github.com/faeldon/philippines-psgc-shapefiles)**.
+>
+> For the latest Philippine PSGC shapefiles, download them from the new repository's
+> [Releases](https://github.com/faeldon/philippines-psgc-shapefiles/releases). Each PSGC quarter is
+> a release with its shapefile zips, CSVs and `SHA256SUMS`, and no `git-lfs` is needed.
+>
+> The files below are as of 4Q 2023 and will not be updated. Please file issues and pull requests
+> in the new repository.
+
+---
+
 # Philippines PSGC Administrative Boundaries Shapefiles
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://raw.githubusercontent.com/faeldon/philippines-json-maps/master/LICENSE)
